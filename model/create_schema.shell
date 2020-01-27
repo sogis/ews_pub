@@ -1,5 +1,5 @@
 #!/bin/bash
 
-java -jar $(pwd)/../external/ili2pg-4.3.2/ili2pg-4.3.2.jar --schemaimport --dbdatabase postgres --dbschema afu_erdwaermesonden --dbusr postgres --dbpwd postgres \
+java -jar $(pwd)/../external/ili2pg-4.3.2/ili2pg-4.3.2.jar --schemaimport --dbdatabase postgres --dbschema afu_erdwaermesonden_pub --dbusr postgres --dbpwd postgres \
 	--defaultSrsAuth EPSG --defaultSrsCode 2056 --strokeArcs --createGeomIdx --createFk --createFkIdx --createEnumTabs --beautifyEnumDispName --createMetaInfo --createUnique --createNumChecks --nameByTopic \
 	--models SO_AfU_Erdwaermesonden_Publikation_20200113

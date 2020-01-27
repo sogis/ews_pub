@@ -1,5 +1,6 @@
-    
+CREATE OR REPLACE VIEW afu_erdwaermesonden.erdwaermesonden_bohrung_v AS
 SELECT
+	  erdwaermesonden_bohrung.t_id,
       erdwaermesonden_bohrung.anlage_uuid,
       bohrung_nummer AS nummer,
       status_code AS anlage_status_code,

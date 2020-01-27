@@ -1,0 +1,22 @@
+#!/bin/bash
+
+export DB_URI_EDIT=$GRETL_PROD_EDIT_URL
+export DB_USER_EDIT=$GRETL_DB_USER
+export DB_PWD_EDIT=$GRETL_DB_PASS
+
+export DB_URI_SOGIS=$GRETL_DEV_DB_URL
+export DB_USER_SOGIS=$GRETL_DEV_DB_USER
+export DB_PWD_SOGIS=$GRETL_DEV_DB_PASS
+
+echo "===================================================================="
+echo "DB_URI_EDIT: $DB_URI_EDIT"
+echo "DB_USER_EDIT: $DB_USER_EDIT"
+echo "DB_PWD_EDIT: $DB_PWD_EDIT"
+echo ""
+echo "DB_URI_SOGIS: $DB_URI_SOGIS"
+echo "DB_USER_SOGIS: $DB_USER_SOGIS"
+echo "DB_PWD_SOGIS: $DB_PWD_SOGIS"
+echo "===================================================================="
+
+/bin/bash ~/Dokumente/git/ews_pub/from_prod/start-gretl.shell --docker-image sogis/gretl-runtime:production --job-directory ~/Dokumente/git/ews_pub/from_prod/
+
